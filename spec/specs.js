@@ -4,6 +4,6 @@ describe('triangleTracker', function() {
   });
 
   it("returns equilateral if all sides are equal", function() {
-    expect(triangleTracker(2, 2, 2)).to.equal(equilateral);
+    expect(triangleTracker(2, 2, 2)).to.equal("equilateral");
   });
 });

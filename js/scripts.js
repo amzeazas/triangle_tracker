@@ -1,3 +1,7 @@
 var triangleTracker = function(side1, side2, side3) {
-  return false;
+  if ((side1 === side2) && (side1 === side3)) {
+    return "equilateral";
+  } else {
+    return false;
+  }
 };
