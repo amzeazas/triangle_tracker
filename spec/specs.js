@@ -10,4 +10,8 @@ describe('triangleTracker', function() {
   it("returns isosceles if two sides are equal", function() {
     expect(triangleTracker(2, 2, 1)).to.equal("isosceles");
   });
+
+  it("returns scalene if two sides are equal", function() {
+    expect(triangleTracker(5, 2, 4)).to.equal("scalene");
+  });
 });
