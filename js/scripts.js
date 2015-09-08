@@ -9,3 +9,35 @@ var triangleTracker = function(side1, side2, side3) {
     return "scalene";
   }
 };
+
+$(document).ready(function() {
+  $("form#triangle").submit(function(event) {
+    var side1 = parseInt($("input#side1").val());
+    var side2 = parseInt($("input#side2").val());
+    var side3 = parseInt($("input#side3").val());
+    var result = triangleTracker(side1, side2, side3);
+
+    $(".side1").text(side1);
+    $(".side2").text(side2);
+    $(".side3").text(side3);
+
+    $(".not").empty();
+    $(".n").empty();
+    $(".type").empty();
+    
+    if (!result) {
+      $(".not").text("not");
+    } else if (result === "equilateral") {
+      $(".type").text("equilateral");
+      $(".n").text("n");
+    } else if (result === "isosceles") {
+      $(".type").text("isosceles");
+      $(".n").text("n");
+    } else if (result === "scalene") {
+      $(".type").text("scalene");
+    }
+
+    $("#result").show();
+    event.preventDefault();
+  });
+});
